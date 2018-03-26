@@ -1,0 +1,17 @@
+@@ Parameterized
+    | deviceName                        | deviceType  | gridArgs |
+    #| FireFox on Mac Book Pro           | desktop     | http://localhost:4444/wd/hub --dc.browserName "firefox" --dc.platform "MAC" |    
+    #| Safari on Mac Book Pro            | desktop     | http://localhost:4444/wd/hub --dc.browserName "safari" --dc.platform "MAC" |
+    | Chrome on Mac Book Pro            | desktop     | http://localhost:4444/wd/hub --dc.browserName "chrome" --dc.platform "MAC" |    
+    | Safari on iPad Air 2              | tablet      | http://127.0.0.1:8001/wd/hub --dc.browserName Safari --dc.platformName iOS --dc.deviceName "iPad Air 2" --dc.platformVersion 9.3 |
+    #| Chrome on Samsung Galaxy S6 edge  | mobile      | http://127.0.0.1:8002/wd/hub --dc.browserName Chrome --dc.platformName Android --dc.deviceName S6 --dc.bundleId com.android.chrome |
+    #| Safari on iPhone 6                | mobile      | http://127.0.0.1:8001/wd/hub --dc.browserName Safari --dc.platformName iOS --dc.deviceName "iPhone 6" --dc.platformVersion 9.3 |    
+    #| iPhone                            | mobile     | http://127.0.0.1:8001/wd/hub --dc.ipa "/Users/lilia/SafariLauncher/SafariLauncher.ipa" --dc.platformName iOS --dc.udid "25805b8e9b36f4b584c4711e4eb5e767cb9d2e7c" --dc.deviceName "Demon" --dc.platformVersion 9.3.2 --dc.bundleId com.bytearc.SafariLauncher | 
+    #| iPhone                            | mobile     | http://127.0.0.1:8001/wd/hub --dc.platformName iOS --dc.udid "25805b8e9b36f4b584c4711e4eb5e767cb9d2e7c" --dc.deviceName "Demon" --dc.platformVersion 9.3.2 --dc.bundleId com.bytearc.SafariLauncher | 
+    #| iPhone                            | mobile     | http://127.0.0.1:8001/wd/hub --dc.platformName iOS --dc.browserName Safari --dc.udid "25805b8e9b36f4b584c4711e4eb5e767cb9d2e7c" --dc.deviceName "Demon" --dc.platformVersion 9.3.2 | 
+
+
+OGR Homepage on ${deviceName} 
+  selenium grid ${gridArgs} --page "http://vr.de"
+        wait 5s
+        check ./testcases/katf19.gspec --include ${deviceType}

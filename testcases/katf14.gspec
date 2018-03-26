@@ -1,0 +1,14 @@
+@objects
+
+    startseite                css   body.startseite
+    
+= Main section =
+
+    @on mobile, tablet, desktop
+        
+        # --- Ende KATF5 ---
+        
+        startseite:
+            visible
+        
+        # --- Ende KATF5 ---        

@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+cd /Users/lbut/galen/
+
+timeStamp=$(date '+%Y_%m_%d_%H_%M_%S');
+
+if [ ! -d "./dumps/${timeStamp}" ]; then
+mkdir "./dumps/${timeStamp}";
+fi
+
+open -a Terminal.app "./bash/startSelenium"
+#open -a Terminal.app "./bash/startAppiumiOS"
+#open -a Terminal.app "./bash/startAppiumAndroid"
+
+sleep 5
+
+galen test ./testconfig/dump.test --htmlreport ./dumps/${timeStamp} --parallel-tests 4
+wait
+
+cd /Users/lbut/galen/dumps/${timeStamp}
+
+shopt -s extglob
+rm !(*.png)
+rm icon-sprites.png
+
+cp /Users/lbut/galen/sitemap.txt /Users/lbut/galen/dumps/${timeStamp}
+
+java -jar /Users/lbut/galen/url_folders.jar ${timeStamp}
+
+#killall Terminal

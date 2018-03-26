@@ -1,0 +1,64 @@
+@objects
+
+    impressum_link      xpath   //a[text()="Impressum"]
+    datenschutz_link    xpath   //a[text()="Datenschutz"]    
+    kontakt_link        xpath   //a[text()="Kontakt"]
+    logo                xpath   //div[@id="logo"]/a/img
+    header              id      header
+    alignment           css     strong
+    input_fields-*      css     input
+    button_local        css     li.navmobilelist__item--localisation
+    button_search       css     li.navmobilelist__item--search
+    button_menu         css     li.navmobilelist__item--menu
+    
+= Main section =
+
+    @on mobile, tablet, desktop
+        
+        # --- Anfang KATF6 ---
+        
+        impressum_link:
+            visible
+            
+        datenschutz_link:
+            visible
+            
+        kontakt_link:
+            visible        
+        
+        # --- Ende KATF6 ---
+        
+        # --- Ende KATF5 ---
+        
+        logo:
+            inside header
+            css text-align is "left"
+        
+        # --- Ende KATF5 ---        
+        
+    @on mobile, tablet    
+        # --- Anfang GDTF16 ---
+        
+        @for [1 - ${count("input_fields-*")}] as index
+            @if ${isVisible(("input_fields-" + index))}
+                input_fields-${index}:
+                    height > 15px
+        
+        # --- Ende GDTF16 ---
+        
+        # --- Anfang GDTF13 ---
+
+        button_local:
+            visible
+            left-of button_search >8px
+            
+        button_search:
+            visible
+            right-of button_local >8px
+            left-of button_menu >8px
+        
+        button_menu:
+            visible
+            right-of button_search >8px		
+
+        # --- Ende GDTF13 ---

@@ -1,0 +1,14 @@
+@objects
+
+    content       css    div.ym-cbox-right
+    body          css    div.ym-wrapper
+    
+= Main section =
+
+    @on mobile   
+        # --- Anfang GDTF4 ---
+            
+        content:
+            inside body 16px left right, 24px top bottom
+        
+        # --- Ende GDTF4 ---

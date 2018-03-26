@@ -1,0 +1,14 @@
+@objects
+
+    mitgliederprojekte              css      body.mitgliederprojekte
+    
+= Main section =
+
+    @on mobile, tablet, desktop
+        
+        # --- Ende KATF3 ---
+        
+        mitgliederprojekte:
+            visible
+        
+        # --- Ende KATF3 ---        

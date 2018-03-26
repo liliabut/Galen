@@ -1,0 +1,22 @@
+@objects
+
+    impressum_link      xpath   //a[text()="Impressum"]
+    datenschutz_link    xpath   //a[text()="Datenschutz"]    
+    kontakt_link        xpath   //a[text()="Kontakt"]
+    
+= Main section =
+
+    @on mobile, tablet, desktop
+        
+        # --- Anfang KATF6 ---
+        
+        impressum_link:
+            visible
+            
+        datenschutz_link:
+            visible
+            
+        kontakt_link:
+            visible        
+        
+        # --- Ende KATF6 ---

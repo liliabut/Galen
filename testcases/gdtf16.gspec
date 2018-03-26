@@ -1,0 +1,15 @@
+@objects
+
+    input_fields-*      css     input
+    
+= Main section =
+
+    @on mobile, tablet    
+        # --- Anfang GDTF16 ---
+        
+        @for [1 - ${count("input_fields-*")}] as index
+            @if ${isVisible(("input_fields-" + index))}
+                input_fields-${index}:
+                    height > 15px
+        
+        # --- Ende GDTF16 ---

@@ -1,0 +1,11 @@
+@objects
+
+    filial_suche_item-*                    xpath   ((//div[@class='accordeon has-pager'])[1])/div[@class='acc-wrapper']
+    filial_suche_item_bundesweit-*         xpath   ((//div[@class='accordeon has-pager'])[2])/div[@class='acc-wrapper']
+    
+= Main section =
+
+    @on desktop  
+        global:
+            count any filial_suche_item-* is 100
+            count any filial_suche_item_bundesweit-* is 101

@@ -1,0 +1,43 @@
+@@ Parameterized
+    | deviceName                        | deviceType  | gridArgs |
+    #| Mac Book Pro                      | desktop     | http://localhost:4444/wd/hub --dc.browserName "firefox" --dc.platform "MAC" |    
+    #| Safari on Mac Book Pro            | desktop     | http://localhost:4444/wd/hub --dc.browserName "safari" --dc.platform "MAC" |
+    #| Chrome on Mac Book Pro            | desktop     | http://localhost:4444/wd/hub --dc.browserName "chrome" --dc.platform "MAC" |    
+    | Safari on iPad Air 2              | tablet      | http://127.0.0.1:8001/wd/hub --dc.browserName Safari --dc.platformName iOS --dc.deviceName "iPad Air 2" --dc.platformVersion 9.3 |
+    #| Chrome on Samsung Galaxy S6 edge  | mobile      | http://127.0.0.1:8002/wd/hub --dc.browserName Chrome --dc.platformName Android --dc.deviceName S6 --dc.bundleId com.android.chrome |
+    #| Safari on iPhone 6                | mobile     | http://127.0.0.1:8001/wd/hub --dc.browserName Safari --dc.platformName iOS --dc.deviceName "iPhone 6" --dc.platformVersion 9.3 |    
+    #| Chrome on iPhone 6                | mobile     | http://127.0.0.1:8001/wd/hub --dc.browserName Chrome --dc.platformName iOS --dc.deviceName "Demon" --dc.bundleId com.google.chrome.ios --dc.platformVersion 9.3 |    
+
+OGR Homepage on ${deviceName} 
+  selenium grid ${gridArgs} --page https://www.vr.de/privatkunden/service/kontakt/fragen-zur-website.html
+        #--- for mobile uncomment here, no parallel with desktop ---#
+
+        run ./js/open_search.js
+        wait 5s
+        check ./testcases/katf3_3.gspec --include "mobile, tablet"
+
+        run ./js/open_side_menu.js
+        wait 5s
+        check ./testcases/katf3_4.gspec --include "mobile, tablet"        
+        
+        run ./js/open_local.js
+        wait 5s
+        check ./testcases/katf3_5.gspec --include "mobile, tablet" 
+        
+         #--- desktop ---#
+        
+        run ./js/click_more_info.js
+        wait 5s
+        check ./testcases/katf3.gspec --include "mobile, tablet, desktop"
+        
+        #run ./js/click_alle_videos.js
+        #wait 5s
+        #check ./testcases/katf3_1.gspec --include "mobile, tablet, desktop" 
+               
+        run ./js/click_weitere_beispiele.js
+        wait 5s
+        check ./testcases/katf3_2.gspec --include "mobile, tablet, desktop"
+        
+        run ./js/click_alle_nachrichten.js
+        wait 5s
+        check ./testcases/katf3_6.gspec --include "mobile, tablet, desktop"

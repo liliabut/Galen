@@ -1,0 +1,18 @@
+@@ Parameterized
+    | deviceName                        | deviceType  | size     | gridArgs |
+    | FireFox on Mac Book Pro           | desktop     | --size 1280x800 | http://localhost:4444/wd/hub --dc.browserName "firefox" --dc.platform "MAC" |    
+    #| Safari on Mac Book Pro            | desktop     | --size 1280x800 | http://localhost:4444/wd/hub --dc.browserName "safari" --dc.platform "MAC" |
+    #| Safari on Mac Book Pro            | tablet      | --size 768x800  | http://localhost:4444/wd/hub --dc.browserName "safari" --dc.platform "MAC" |
+    #| Chrome on Mac Book Pro            | desktop     | --size 1280x800 | http://localhost:4444/wd/hub --dc.browserName "chrome" --dc.platform "MAC" |    
+    #| Safari on iPad Air 2              | tablet      || http://127.0.0.1:8001/wd/hub --dc.browserName Safari --dc.newCommandTimeout 9000 --dc.platformName iOS --dc.deviceName "iPad Air 2" --dc.automationName XCUITest --dc.platformVersion 11.1 |
+    #| Chrome on Samsung Galaxy S6 edge  | mobile      || http://127.0.0.1:8002/wd/hub --dc.browserName Chrome --dc.platformName Android --dc.deviceName S6 --dc.bundleId com.android.chrome |
+    #| Safari on Norberts iPhone 6       | mobile      || http://127.0.0.1:8001/wd/hub --dc.browserName Safari --dc.udid bba900da8b605514093b05022f69b564b6885199 --dc.platformName iOS --dc.deviceName "Norberts iPhone" --dc.automationName XCUITest --dc.platformVersion 11.0.2 |   
+
+Prototyp Geldautomatensuche on ${deviceName} 
+  selenium grid ${gridArgs} --page "http://rc-ogrhtmlprototyp.testintern/17-2-0/geldautomatensuche.html" ${size}
+        wait 10s
+        check ./testcases/filial_suche_count.gspec --include "desktop, mobile, tablet"
+        
+        wait 2s
+        run ./js/click_filialsuche_dropdown.js
+        check ./testcases/filial_suche_dropdown.gspec --include "desktop, mobile, tablet"

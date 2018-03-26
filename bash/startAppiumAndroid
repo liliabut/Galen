@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+appium -a 127.0.0.1 -p 8002 --log-level info --backend-retries 20 --chromedriver-executable /Users/lbut/galen/chromedriver

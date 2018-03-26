@@ -1,0 +1,30 @@
+@objects
+
+    all_inputs1-*         xpath     //input[contains(@placeholder,'0123 12345678')]
+    all_inputs2-*         xpath     //input[contains(@placeholder,'z. B. PLZ, Ort, Straße')]
+    all_inputs3-*         xpath     //input[contains(@placeholder,'Suche')]
+    
+= Main section =
+
+    @on mobile, tablet, desktop  
+        # --- Anfang ADTF1 ---
+
+        @for [1 - ${count("all_inputs1-*")}] as index
+            @if ${isVisible(("all_inputs1-" + index))}
+                all_inputs1-${index}:
+                    visible
+                    css color is "rgba(206, 206, 206, 1)"
+
+        @for [1 - ${count("all_inputs2-*")}] as index
+            @if ${isVisible(("all_inputs2-" + index))}
+                all_inputs2-${index}:
+                    visible
+                    css color is "rgba(0, 0, 0, 1)"
+
+        @for [1 - ${count("all_inputs3-*")}] as index
+            @if ${isVisible(("all_inputs3-" + index))}
+                all_inputs3-${index}:
+                    visible
+                    css color is "rgba(0, 0, 0, 1)"
+                                             
+        # --- Ende ADTF1 ---

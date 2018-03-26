@@ -1,0 +1,14 @@
+@objects
+
+    mobile_local              css      div.navmobilelist__content--localisation
+    
+= Main section =
+
+    @on mobile, tablet, desktop
+        
+        # --- Ende KATF3 ---
+        
+        mobile_local:
+            visible
+        
+        # --- Ende KATF3 ---        

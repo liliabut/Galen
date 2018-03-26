@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+cd /Users/lbut/galen/
+
+grep -v "^#" sitemap.csv > sitemap2.csv
+cat sitemap2.csv | sed "1 d" > sitemap3.csv
+cut -d , -f 1 sitemap3.csv > sitemap2.csv
+sed 's/\"//g' sitemap2.csv > sitemap.csv
+
+rm -f sitemap2.csv
+rm -f sitemap3.csv
+
+open -a Terminal.app "./testrun/run_dump"
+
+wait
+killall Terminal

@@ -1,0 +1,14 @@
+@objects
+
+    video_home              css      body.video-home
+    
+= Main section =
+
+    @on mobile, tablet, desktop
+        
+        # --- Ende KATF3 ---
+        
+        video_home:
+            visible
+        
+        # --- Ende KATF3 ---        

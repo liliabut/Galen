@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd /Users/lbut/galen/
+
+java -jar url_comp.jar
+
+#killall Terminal

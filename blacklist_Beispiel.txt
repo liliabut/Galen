@@ -1,0 +1,7 @@
+domain, starts_with, contains, ends_with
+http://rc-ogrhtmlprototyp.testintern, , ,-archive.html
+https://www.vr.de,/standorte/, , 
+https://www.vr.de,/geldautomaten/, , 
+https://www.genobroker.de, ,Nutzungsbedingungen, 
+https://www.genobroker.de, , ,utz.html
+https://www.genobroker.de,/im, , 

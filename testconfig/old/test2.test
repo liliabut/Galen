@@ -1,0 +1,8 @@
+@@ Parameterized
+    | deviceName   | deviceType | gridArgs | 
+    | iPhone       | mobile     | http://127.0.0.1:8001/wd/hub --dc.browserName Safari --dc.platformName iOS --dc.deviceName "iPhone 5" --dc.platformVersion 9.2 |
+    | Samsung Galaxy S6 edge        | mobile     | http://127.0.0.1:8001/wd/hub --dc.browserName Chrome --dc.platformName Android --dc.deviceName S6 --dc.bundleId com.android.chrome |
+
+Home page on ${deviceName} 
+  selenium grid ${gridArgs} --page http://vr.de
+        check homepage.gspec --include ${deviceType}

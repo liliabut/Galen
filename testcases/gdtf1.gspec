@@ -1,0 +1,27 @@
+@objects
+
+    all_links-*         css     a
+    all_buttons-*       css     button
+    all_buttons2-*      css     a.btn
+    
+= Main section =
+
+    @on mobile, tablet   
+        # --- Anfang GDTF1 ---
+        @for [1 - ${count("all_links-*")}] as index
+            @if ${isVisible(("all_links-" + index))}
+                all_links-${index}:
+                    height > 15px
+                    
+        @for [1 - ${count("all_buttons-*")}] as index
+            @if ${isVisible(("all_buttons-" + index))}
+                all_buttons-${index}:
+                    height > 47px
+                    width  > 47px
+                    
+        @for [1 - ${count("all_buttons2-*")}] as index
+            @if ${isVisible(("all_buttons2-" + index))}
+                all_buttons2-${index}:
+                    height > 47px
+                    width  > 47px     
+        # --- Ende GDTF1 ---

@@ -1,0 +1,16 @@
+@script baseline_grid.js
+
+@objects
+
+    body       css    body
+
+= Main section =
+
+    @on tablet   
+        # --- Anfang GDTF5 ---
+         
+        body:   
+           | body width is base 8
+           | body height is base 8
+        
+        # --- Ende GDTF5 ---

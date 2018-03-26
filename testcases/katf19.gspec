@@ -1,0 +1,100 @@
+@objects
+
+    logo                xpath   //div[@id="logo"]/a/img
+    header              id      header
+    footer              css     div.megafooter
+    logoleiste          css     div.module-logoleiste-inner
+    linkliste-*         css     div.module.module-linklist.l-social.ym-clearfix
+    impressum_link      xpath   //a[text()="Impressum"]
+    datenschutz_link    xpath   //a[text()="Datenschutz"]    
+    kontakt_link        xpath   //a[text()="Kontakt"]
+    search              css     div.combo-field 
+    aps                 css     div.map-canvas
+    navi                id      nav
+    bubble              css     div.module.module-lebenseinstieg
+    video               css     div.ym-grid.ym-clearfix.keep-mobile-layout
+    teaser-*            css     div.module-teaserlist
+    button_search       css     li.navmobilelist__item.navmobilelist__item--search  
+    button_navi         css     li.navmobilelist__item.navmobilelist__item--menu 
+     
+    
+= Main section =
+
+    @on desktop
+        
+        # --- Ende KATF19 ---
+        
+        logo:
+            visible
+            inside header
+            
+        header:
+            visible
+            
+        footer:
+            visible
+            
+        search:
+            visible
+            inside header
+            
+        aps:
+            visible 
+            
+        linkliste-*:
+            visible
+            inside footer
+            
+        logoleiste:
+            visible
+            
+            
+        navi:
+            visible
+            
+        bubble:
+            visible
+             
+        video:
+            visible
+            
+        teaser-*:
+            visible
+            
+    @on mobile, tablet
+        
+        # --- Ende KATF19 ---
+        
+        logo:
+            visible
+            inside header
+            
+        header:
+            visible
+            
+        footer:
+            visible
+            
+        button_search:
+            visible
+            
+        aps:
+            visible 
+            
+        linkliste-*:
+            visible
+            
+        logoleiste:
+            visible
+            
+        button_navi:
+            visible
+            
+        bubble:
+            visible
+             
+        video:
+            visible
+            
+        teaser-*:
+            visible            

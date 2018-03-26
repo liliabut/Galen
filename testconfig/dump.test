@@ -1,0 +1,207 @@
+@@ Parameterized
+    | deviceName                        | deviceType  | size     | gridArgs |
+    #| FireFox on Mac Book Pro           | desktop     | --size 1280x800 | http://localhost:4444/wd/hub --dc.browserName "firefox" --dc.platform "MAC" |    
+    #| Safari on Mac Book Pro            | desktop     | --size 1280x800 | http://localhost:4444/wd/hub --dc.browserName "safari" --dc.platform "MAC" |
+    #| Safari on Mac Book Pro            | tablet      | --size 768x800  | http://localhost:4444/wd/hub --dc.browserName "safari" --dc.platform "MAC" |
+    #| Chrome on Mac Book Pro            | desktop     | --size 1280x800 | http://localhost:4444/wd/hub --dc.browserName "chrome" --dc.platform "MAC" |    
+    #| Safari on iPad Air 2              | tablet      || http://127.0.0.1:8001/wd/hub --dc.browserName Safari --dc.newCommandTimeout 9000 --dc.platformName iOS --dc.deviceName "iPad Air 2" --dc.automationName XCUITest --dc.platformVersion 11.1 |
+    | Chrome on Samsung Galaxy S6 edge  | mobile      || http://127.0.0.1:8002/wd/hub --dc.browserName Chrome --dc.platformName Android --dc.deviceName S6 --dc.bundleId com.android.chrome |
+    #| Safari on Norberts iPhone 6       | mobile      || http://127.0.0.1:8001/wd/hub --dc.browserName Safari --dc.udid bba900da8b605514093b05022f69b564b6885199 --dc.platformName iOS --dc.deviceName "Norberts iPhone" --dc.automationName XCUITest --dc.platformVersion 11.0.2 |    
+
+Webpage on ${deviceName} 
+  selenium grid ${gridArgs} --page https://www.google.com ${size}
+    run ./js/open_url.js '{url: "https://www.bbbank.de/homepage.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.berliner-volksbank.de/homepage.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.volksbank-boerde-bernburg.de/start.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.cronbank.de/bank-der-verbundgruppen.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.volksbanking.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.eb.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.flessabank.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.genobroker.de/homepage.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.hausbank.de/homepage.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.volksbank-heilbronn.de/homepage.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.vrbank-kf-oal.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.volksbank-kassel-goettingen.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://privatebanking.volksbank-kassel-goettingen.de/private-banking-volksbank-kassel-goettingen.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.vrbank-mkb.de/homepage.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://beratung.vrbank-mkb.de/homepage.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://servicepoint.vrbank-mkb.de/homepage.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://beratungspoint.vrbank-mkb.de/homepage.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.mvb.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.raiba-muc-sued.de/start.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.vm-raiba-muc-sued.de/start.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.vrbank.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.voba-rheinahreifel.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.vb-regensburg.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.vr.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.vr.de/firmenkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.vr.de/junge-kunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.vr.de/karriere.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://bayern.vr.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://bw.vr.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://sh.vr.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://mv.vr.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://gasfdbvr.vr.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://weser-ems.vr.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://immobilien.vr.de/immobilien.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.vrsta.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.westerwaldbank.de/startseite.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://onlinefiliale.westerwaldbank.de/online-filiale.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://privatebanking.westerwaldbank.de/privatebanking.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"
+    run ./js/open_url.js '{url: "https://www.wvb.de/privatkunden.html"}'
+    wait 1s
+    run ./js/hide_elements.js
+    wait 5s
+    check ./testcases/gdtf5.gspec --include "tablet, mobile, desktop"

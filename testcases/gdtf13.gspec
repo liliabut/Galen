@@ -1,0 +1,33 @@
+@objects
+
+    button_local        css     li.navmobilelist__item--localisation
+    button_search       css     li.navmobilelist__item--search
+    button_menu         css     li.navmobilelist__item--menu
+    
+= Main section =
+
+    @on mobile, tablet    
+        # --- Anfang GDTF13 ---
+        
+        button_local:
+            css margin-left is "8px"
+            css padding-left is "8px"
+            css margin-right is "8px"
+            css padding-right is "8px"
+            css border-radius is "2px"
+            
+        button_search:
+            css margin-left is "8px"
+            css padding-left is "8px"
+            css margin-right is "8px"
+            css padding-right is "8px"
+            css border-radius is "2px"
+        
+        button_menu:
+            css margin-left is "8px"
+            css padding-left is "8px"
+            css margin-right is "8px"
+            css padding-right is "8px"
+            css border-radius is "2px"
+        
+        # --- Ende GDTF13 ---

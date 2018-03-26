@@ -1,0 +1,14 @@
+@objects
+
+    mobile_search              css      div.navmobilelist__content--search
+    
+= Main section =
+
+    @on mobile, tablet, desktop
+        
+        # --- Ende KATF3 ---
+        
+        mobile_search:
+            visible
+        
+        # --- Ende KATF3 ---        

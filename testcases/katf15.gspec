@@ -1,0 +1,14 @@
+@objects
+
+    searchResult              css      span.term
+    
+= Main section =
+
+    @on mobile, tablet, desktop
+        
+        # --- Ende KATF5 ---
+        
+        searchResult:
+            text starts "Sie haben nach info gesucht."
+        
+        # --- Ende KATF5 ---        

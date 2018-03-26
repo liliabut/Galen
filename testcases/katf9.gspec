@@ -1,0 +1,27 @@
+@objects
+
+    header              id      header
+    search              css     div.combo-field
+    button_search       css     li.navmobilelist__item--search    
+    
+= Main section =
+
+    @on desktop
+        
+        # --- Ende KATF9 ---
+        
+        search:
+            visible
+            inside header
+        
+        # --- Ende KATF9 ---   
+        
+    @on mobile, tablet
+        
+        # --- Ende KATF9 ---
+        
+        button_search:
+            visible
+            inside header
+        
+        # --- Ende KATF9 ---                

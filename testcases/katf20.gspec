@@ -1,0 +1,30 @@
+@objects
+
+    errorName              css      span.error-for-Nameid
+    errorVorname           css      span.error-for-Vornameid
+    errorEmail             css      span.error-for-E_Mail_Adresseid
+    errorNachricht         css      span.error-for-Ihre_Nachricht_an_unsid
+    
+= Main section =
+
+    @on mobile, tablet, desktop
+        
+        # --- Ende KATF20 ---
+        
+        errorName:
+            visible
+            #text is "Bitte geben Sie einen Namen ein."
+            
+        errorVorname:
+            visible
+            #text is "Bitte geben Sie einen Vornamen ein."
+            
+        errorEmail:
+            visible
+            #text is "Bitte geben Sie Ihre E-Mail-Adresse ein."
+            
+        errorNachricht:
+            visible
+            #text is "Bitte geben Sie Ihre Nachricht ein."                        
+        
+        # --- Ende KATF20 ---        

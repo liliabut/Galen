@@ -1,0 +1,14 @@
+@objects
+
+    confirmation              css      h1
+    
+= Main section =
+
+    @on mobile, tablet, desktop
+        
+        # --- Ende KATF2 ---
+        
+        confirmation:
+            text is "Nachricht versendet"
+        
+        # --- Ende KATF2 ---        

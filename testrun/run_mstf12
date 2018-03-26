@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+cd /Users/lilia/Downloads/galen-bin-2.3.0/
+
+timeStamp=$(date '+%Y_%m_%d_%H_%M_%S');
+
+if [ ! -d "./reports/gdtf16/${timeStamp}" ]; then
+mkdir "./reports/gdtf16/${timeStamp}";
+fi
+
+open -a Terminal.app "./bash/startSelenium"
+open -a Terminal.app "./bash/startAppiumiOS"
+open -a Terminal.app "./bash/startAppiumAndroid"
+
+sleep 5
+
+galen test ./testconfig/mstf12.test --htmlreport ./reports/mstf12/${timeStamp} --parallel-tests 4
+wait
+killall Terminal

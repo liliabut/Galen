@@ -1,0 +1,55 @@
+@@ Parameterized
+    | deviceName                        | deviceType  | gridArgs |
+    | Mac Book Pro                      | desktop     | http://localhost:4444/wd/hub --dc.browserName "firefox" --dc.platform "MAC" |    
+    #| Safari on Mac Book Pro            | desktop     | http://localhost:4444/wd/hub --dc.browserName "safari" --dc.platform "MAC" |
+    #| Chrome on Mac Book Pro            | desktop     | http://localhost:4444/wd/hub --dc.browserName "chrome" --dc.platform "MAC" |    
+    #| Safari on iPad Air 2              | tablet      | http://127.0.0.1:8001/wd/hub --dc.browserName Safari --dc.platformName iOS --dc.deviceName "iPad Air 2" --dc.platformVersion 9.3 #|
+    #| Chrome on Samsung Galaxy S6 edge  | mobile      | http://127.0.0.1:8002/wd/hub --dc.browserName Chrome --dc.platformName Android --dc.deviceName S6 --dc.bundleId com.android.chrome |
+    #| Safari on iPhone 6                | mobile     | http://127.0.0.1:8001/wd/hub --dc.browserName Safari --dc.platformName iOS --dc.deviceName "iPhone 6" --dc.platformVersion 9.3 |    
+
+Image comparision on ${deviceName}
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden/ihre-ziele.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden\ihre-ziele.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden/ihre-ziele/auto-kaufen.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden\ihre-ziele\auto-kaufen.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden/ihre-ziele/erbschaft.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden\ihre-ziele\erbschaft.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden/ihre-ziele/familie-gruenden.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden\ihre-ziele\familie-gruenden.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden/ihre-ziele/haus-kaufen.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden\ihre-ziele\haus-kaufen.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden/ihre-ziele/haus-renovieren.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden\ihre-ziele\haus-renovieren.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden/ihre-ziele/heiraten.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden\ihre-ziele\heiraten.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden/ihre-ziele/mein-erster-job.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden\ihre-ziele\mein-erster-job.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden/ihre-ziele/meine-rente-planen.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden\ihre-ziele\meine-rente-planen.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden/ihre-ziele/urlaub.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden\ihre-ziele\urlaub.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden/unsere-produkte.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden\unsere-produkte.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden/unsere-produkte/was-ist-ein-girokonto.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden\unsere-produkte\was-ist-ein-girokonto.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden/unsere-produkte/was-ist-ein-girokonto/girokonto.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden\unsere-produkte\was-ist-ein-girokonto\girokonto.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+
+  selenium grid ${gridArgs} --page "https://www.vr.de/privatkunden/unsere-produkte/was-ist-ein-girokonto/konto-eroeffnen.html"
+        check /Users/lbut/galen/dumps/vr_2017_08_22_12_57_39/www.vr.de\privatkunden\unsere-produkte\was-ist-ein-girokonto\konto-eroeffnen.html/desktop/img_comp.gspec --include "tablet, mobile, desktop"
+

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+cd /Users/lbut/galen/
+
+# 5 = 5 seconds delay
+# default delay = 2s
+java -jar dump_helper.jar
+
+open -a Terminal.app "./testrun/run_dump_mobile"
+
+#wait
+#killall Terminal

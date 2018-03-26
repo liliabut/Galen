@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+cd /Users/lbut/galen/
+
+timeStamp=$(date '+%Y_%m_%d_%H_%M_%S');
+
+open -a Terminal.app "./bash/startSelenium"
+#open -a Terminal.app "./bash/startAppiumiOS"
+#open -a Terminal.app "./bash/startAppiumAndroid"
+
+sleep 5
+
+galen test ./testconfig/filial_suche.test --htmlreport ./reports/filial_suche/${timeStamp} --parallel-tests 4
+wait
+killall Terminal

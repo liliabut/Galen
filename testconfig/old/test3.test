@@ -1,0 +1,8 @@
+@@ Parameterized
+    | deviceName   | deviceType | gridArgs |
+    | iPhone       | mobile     | http://127.0.0.1:8001/wd/hub --dc.browserName Safari --dc.platformName iOS --dc.udid 25805b8e9b36f4b584c4711e4eb5e767cb9d2e7c --dc.deviceName "Demon" --dc.platformVersion 9.3.2 | 
+    #| iPhone       | mobile     | http://127.0.0.1:8001/wd/hub --dc.browserName Safari --dc.platformName iOS --dc.udid 25805b8e9b36f4b584c4711e4eb5e767cb9d2e7c --dc.deviceName "iPhone 5" --dc.platformVersion 9.3 |
+
+Home page on ${deviceName} 
+  selenium grid ${gridArgs} --page http://vr.de
+        check homepage.gspec --include ${deviceType}

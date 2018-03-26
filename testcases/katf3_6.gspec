@@ -1,0 +1,14 @@
+@objects
+
+    newsseite              css      body.newsseite
+    
+= Main section =
+
+    @on mobile, tablet, desktop
+        
+        # --- Ende KATF3 ---
+        
+        newsseite:
+            visible
+        
+        # --- Ende KATF3 ---        

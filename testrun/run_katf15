@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+cd /Users/lilia/Downloads/galen-bin-2.3.0/
+
+timeStamp=$(date '+%Y_%m_%d_%H_%M_%S');
+
+open -a Terminal.app "./bash/startSelenium"
+
+sleep 5
+
+galen test ./testconfig/katf15.test --htmlreport ./reports/katf15/${timeStamp} --parallel-tests 4
+wait
+killall Terminal

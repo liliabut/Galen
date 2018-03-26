@@ -1,0 +1,13 @@
+@objects
+
+    typeahead        id    ui-id-1
+    
+= Main section =
+
+    @on desktop    
+        # --- Anfang MSTF12 ---
+        
+        typeahead:
+	        visible
+        
+        # --- Ende MSTF12 ---

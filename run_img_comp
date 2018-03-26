@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cd /Users/lbut/galen/
+
+#java -jar img_comp_final.jar "test1" "test2" 3 0.01
+java -jar img_comp_final.jar "test1" "test2" 0

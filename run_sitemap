@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cd /Users/lbut/galen/
+
+spiderbench.sh
+
+wait
+killall Terminal

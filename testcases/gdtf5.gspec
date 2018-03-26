@@ -1,0 +1,16 @@
+@script ../js/baseline_grid.js
+
+@objects
+
+    body          css    body
+
+= Main section =
+
+    @on mobile, tablet, desktop   
+        # --- Anfang GDTF5 ---
+            
+        screen:
+            width is ${divide8width()}px
+            height is ${divide8height()}px
+        
+        # --- Ende GDTF5 ---

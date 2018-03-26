@@ -1,0 +1,8 @@
+@objects
+    
+= Main section =
+
+    @on mobile, tablet, desktop  
+
+        screen:
+            image file ./last/layout-1-screenshot.png, error 0%

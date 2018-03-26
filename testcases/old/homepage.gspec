@@ -1,0 +1,130 @@
+@objects
+    all_buttons-*       css     button
+    all_links-*         css     a
+    input_fields-*      css     input
+    impressum_link      xpath   //a[text()="Impressum"]
+    datenschutz_link    xpath   //a[text()="Datenschutz"]    
+    kontakt_link        xpath   //a[text()="Kontakt"]
+    header              id      header
+    side_menu           css     div.navmobilelist_content
+    button_local        css     li.navmobilelist__item--localisation
+    button_search       css     li.navmobilelist__item--search
+    button_menu         css     li.navmobilelist__item--menu
+    logo                xpath   //div[@id="logo"]/a/img
+    
+= Main section =
+
+    @on mobile
+        
+        # --- Anfang GDTF1 ---
+        @for [1 - ${count("all_links-*")}] as index
+            @if ${isVisible(("all_links-" + index))}
+                all_links-${index}:
+                    height > 47px
+                    width  > 47px
+
+        @for [1 - ${count("all_buttons-*")}] as index
+            @if ${isVisible(("all_buttons-" + index))}
+                all_buttons--${index}:
+                    height > 47px
+                    width  > 47px
+        # --- Ende GDTF1 ---
+        
+        # --- Anfang GDTF16 ---
+        
+        @for [1 - ${count("input_fields-*")}] as index
+            @if ${isVisible(("input_fields-" + index))}
+                input_fields-${index}:
+                    height > 47px
+        
+        # --- Ende GDTF16 ---
+        
+        # --- Anfang KATF6 ---
+        
+        impressum_link:
+            visible
+            
+        datenschutz_link:
+            visible
+            
+        kontakt_link:
+            visible        
+        
+        # --- Ende KATF6 ---
+        
+        # --- Anfang GDTF7 ---
+        # Click burger button hier
+        side_menu:
+            visible
+            inside parent 56px top right
+        # --- Ende GDTF7 ---
+        
+        # --- Anfang GDTF13 ---
+
+        button_local:
+            visible
+            left-of button_search 8px
+            
+        button_search:
+            visible
+            right-of button_search 8px
+            left-of button_menu 8px
+        
+        button_menu:
+            visible
+            right-of button_search 8px		
+
+        # --- Ende GDTF13 ---
+        
+        # --- Anfang KATF4 ---
+        
+        button_menu:
+            visible
+            inside header 8px left right
+        
+        # --- Ende KATF4 ---
+        
+        # --- Ende KATF5 ---
+        
+        logo:
+            inside header 8px left
+        
+        # --- Ende KATF5 ---
+        
+    @on tablet
+        
+        # --- Anfang GDTF1 ---
+        @for [1 - ${count("all_links-*")}] as index
+            @if ${isVisible(("all_links-" + index))}
+                all_links-${index}:
+                    height > 47px
+                    width  > 47px
+
+        @for [1 - ${count("all_buttons-*")}] as index
+            @if ${isVisible(("all_buttons-" + index))}
+                all_buttons--${index}:
+                    height > 47px
+                    width  > 47px
+        # --- Ende GDTF1 ---
+        
+        # --- Anfang GDTF16 ---
+        
+        @for [1 - ${count("input_fields-*")}] as index
+            @if ${isVisible(("input_fields-" + index))}
+                input_fields-${index}:
+                    height > 55px
+        
+        # --- Ende GDTF16 ---
+        
+                # --- Anfang KATF6 ---
+        
+        impressum_link:
+            visible
+            
+        datenschutz_link:
+            visible
+            
+        kontakt_link:
+            visible        
+        
+        # --- Ende KATF6 ---

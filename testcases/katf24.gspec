@@ -1,0 +1,30 @@
+@objects
+
+    carouselTop          xpath     //div[@class='has-swipe megafooter-slider l-slide']/div[@class='carousel-wrapper']/div[@class='carousel-item-wrap count_1']
+    carouselBottom       xpath     //div[@class='has-swipe content-carousel-slider l-slide']/div[@class='carousel-wrapper']/div[@class='carousel-item-wrap count_1']
+    
+= Main section =
+
+    @on desktop
+        
+        # --- Ende KATF4 ---
+        
+        carouselTop:
+            visible
+            css left is "0px"
+
+        carouselBottom:
+            visible
+            css left is "0px"
+        
+        # --- Ende KATF4 ---        
+        
+    @on mobile, tablet
+        
+        # --- Ende KATF4 ---
+        
+        carouselBottom:
+            visible
+            css left is "0px"
+        
+        # --- Ende KATF4 ---   

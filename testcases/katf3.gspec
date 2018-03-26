@@ -1,0 +1,14 @@
+@objects
+
+    kampagne-omnikanal              css      body.kampagne-omnikanal
+    
+= Main section =
+
+    @on mobile, tablet, desktop
+        
+        # --- Ende KATF3 ---
+        
+        kampagne-omnikanal:
+            visible
+        
+        # --- Ende KATF3 ---        

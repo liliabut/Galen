@@ -1,0 +1,9 @@
+@objects
+
+    filial_suche_item-*                    css     div.loc-street
+    
+= Main section =
+
+    @on desktop  
+        filial_suche_item-1:
+            text is "Chausseestraße 60"

@@ -1,0 +1,17 @@
+@objects
+
+    burger_button       css     li.navmobilelist__item--menu
+    button_search       css     li.navmobilelist__item--search
+    header              id      header
+    
+= Main section =
+
+    @on mobile, tablet, desktop
+        
+        # --- Ende KATF4 ---
+        
+        burger_button:
+            inside header
+            right-of button_search
+        
+        # --- Ende KATF4 ---        

@@ -1,0 +1,5 @@
+domain, starts_with, contains, ends_with
+http://rc-ogrhtmlprototyp.testintern/17-2-0/, , ,-archive.html
+http://rc-ogrhtmlprototyp.testintern/17-2-0/, , ,-archive.php
+https://www.vr.de,/standorte/, , 
+https://www.vr.de,/geldautomaten/, , 

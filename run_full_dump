@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+cd /Users/lbut/galen/
+
+spiderbench.sh
+
+java -jar sitemap_helper.jar
+
+open -a Terminal.app "./testrun/run_dump"
+#wait
+#killall Terminal

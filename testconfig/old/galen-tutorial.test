@@ -1,0 +1,19 @@
+@@ parameterized
+    | browser  |
+    | safari   |
+
+@@ Parameterized
+   | device              | size       | tags        |
+   #| Desktop             | 1024x768   | all,desktop |
+   #| iPad Air 2          | 768x1024   | all,tablet  |
+   #| iPhone 6            | 375x667    | all,mobile  |
+   | Samsung Galaxy S6   | 360x640    | all,mobile  |
+
+Volksbank on ${device} in  ${browser}
+ selenium ${browser} http://vr.de ${size}
+        run open_search.js
+        wait 5s
+        check ./testcases/gdtf16.gspec --include "${tags}"
+        run open_local.js
+        wait 5s
+        check ./testcases/gdtf16.gspec --include "${tags}"

@@ -1,0 +1,14 @@
+@objects
+
+    content       css    div.ym-cbox-right
+    body          css    div.ym-wrapper
+    
+= Main section =
+
+    @on tablet   
+        # --- Anfang GDTF6 ---
+            
+        content:
+            inside body 24px left right, 24px top bottom
+        
+        # --- Ende GDTF6 ---

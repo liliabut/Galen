@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+ios_webkit_debug_proxy -c bba900da8b605514093b05022f69b564b6885199:27753 -d
